@@ -1,0 +1,7 @@
+# Ignore the following
+
+# Logs file
+.logs/
+
+# Pem keys
+https/
