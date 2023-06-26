@@ -5,3 +5,12 @@
 
 # Pem keys
 https/
+
+# Tokens are ignored
+.data/tokens/
+
+# Checks ignored
+.data/checks/
+
+# Users as well
+.data/users/
