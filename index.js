@@ -9,7 +9,7 @@ const cli = require("./lib/cli")
 let app = {}
 
 // Init function
-app.init = () => {
+app.init = (callback) => {
     // Start server
     server.init()
 
@@ -19,11 +19,15 @@ app.init = () => {
     // Start the CLI, but make sure it starts last
     setTimeout(()=>{
         cli.init()
+        callback()
     }, 50)
 }
 
-// Execute
-app.init()
+// Slef invoking only if required directly
+if(require.main === module) {
+    app.init(()=>{})
+}
+
 
 
 
